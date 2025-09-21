@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tempo.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02554b61b8b2a4a88df3c673b019bb89bbc508b5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tempo.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tempo.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
