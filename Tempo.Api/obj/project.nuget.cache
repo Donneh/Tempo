@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "/kBKPsQqrA8=",
+  "success": true,
+  "projectFilePath": "/home/donny/Work/tempo/Tempo.Api/Tempo.Api.csproj",
+  "expectedPackageFiles": [
+    "/home/donny/.nuget/packages/microsoft.aspnetcore.openapi/9.0.9/microsoft.aspnetcore.openapi.9.0.9.nupkg.sha512",
+    "/home/donny/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

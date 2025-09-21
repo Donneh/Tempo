@@ -1,0 +1,11 @@
+/home/donny/Work/tempo/Tempo.Data/bin/Debug/net9.0/Tempo.Data.deps.json
+/home/donny/Work/tempo/Tempo.Data/bin/Debug/net9.0/Tempo.Data.dll
+/home/donny/Work/tempo/Tempo.Data/bin/Debug/net9.0/Tempo.Data.pdb
+/home/donny/Work/tempo/Tempo.Data/obj/Debug/net9.0/Tempo.Data.GeneratedMSBuildEditorConfig.editorconfig
+/home/donny/Work/tempo/Tempo.Data/obj/Debug/net9.0/Tempo.Data.AssemblyInfoInputs.cache
+/home/donny/Work/tempo/Tempo.Data/obj/Debug/net9.0/Tempo.Data.AssemblyInfo.cs
+/home/donny/Work/tempo/Tempo.Data/obj/Debug/net9.0/Tempo.Data.csproj.CoreCompileInputs.cache
+/home/donny/Work/tempo/Tempo.Data/obj/Debug/net9.0/Tempo.Data.dll
+/home/donny/Work/tempo/Tempo.Data/obj/Debug/net9.0/refint/Tempo.Data.dll
+/home/donny/Work/tempo/Tempo.Data/obj/Debug/net9.0/Tempo.Data.pdb
+/home/donny/Work/tempo/Tempo.Data/obj/Debug/net9.0/ref/Tempo.Data.dll
