@@ -1,3 +1,3 @@
 namespace Tempo.Core.Requests;
 
-public record CreateTaskRequest(string Text);
+public record CreateTaskRequest(string Text, int Order);

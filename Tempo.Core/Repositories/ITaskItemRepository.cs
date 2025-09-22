@@ -8,6 +8,5 @@ public interface ITaskItemRepository
     Task<TaskItem?> GetByIdAsync(int id);
     Task<IEnumerable<TaskItem>> GetAllAsync();
     Task DeleteAsync(int id);
-    Task<TaskItem?> MarkCompleteAsync(int id);
-    Task<TaskItem?> MarkIncompleteAsync(int id);
+    Task<TaskItem> UpdateAsync(TaskItem task);
 }

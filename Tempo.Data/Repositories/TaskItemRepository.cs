@@ -34,27 +34,10 @@ public class TaskItemRepository(TempoDbContext context) : ITaskItemRepository
         }
     }
 
-    public async Task<TaskItem?> MarkCompleteAsync(int id)
+    public async Task<TaskItem> UpdateAsync(TaskItem task)
     {
-        var task = await context.Tasks.FindAsync(id);
-        if (task != null)
-        {
-            task.CompletedAt = DateTime.UtcNow;
-            task.UpdatedAt = DateTime.UtcNow;
-            await context.SaveChangesAsync();
-        }
-        return task;
-    }
-
-    public async Task<TaskItem?> MarkIncompleteAsync(int id)
-    {
-        var task = await context.Tasks.FindAsync(id);
-        if (task != null)
-        {
-            task.CompletedAt = null;
-            task.UpdatedAt = DateTime.UtcNow;
-            await context.SaveChangesAsync();
-        }
+        context.Tasks.Update(task);
+        await context.SaveChangesAsync();
         return task;
     }
 }
