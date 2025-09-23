@@ -80,7 +80,10 @@ public class TaskItemService(ITaskItemRepository taskItemRepository) : ITaskItem
         });
     }
 
-    public async Task<IEnumerable<TaskResponse>> GetTasksByDateRange(DateOnly startDate, DateOnly endDate)
+    public async Task<IEnumerable<TaskResponse>> GetTasksByDateRange(
+        DateOnly startDate,
+        DateOnly endDate
+    )
     {
         var tasks = await taskItemRepository.GetByDateRangeAsync(startDate, endDate);
 

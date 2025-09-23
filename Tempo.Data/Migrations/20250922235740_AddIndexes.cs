@@ -8,39 +8,33 @@ namespace Tempo.Data.Migrations
     public partial class AddIndexes : Migration
     {
         const string TableName = "Tasks";
+
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateIndex(
                 name: "IX_Tasks_CompletedAt",
                 table: TableName,
-                column: "CompletedAt");
+                column: "CompletedAt"
+            );
 
             migrationBuilder.CreateIndex(
                 name: "IX_Tasks_CreatedAt",
                 table: TableName,
-                column: "CreatedAt");
+                column: "CreatedAt"
+            );
 
-            migrationBuilder.CreateIndex(
-                name: "IX_Tasks_Order",
-                table: TableName,
-                column: "Order");
+            migrationBuilder.CreateIndex(name: "IX_Tasks_Order", table: TableName, column: "Order");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropIndex(
-                name: "IX_Tasks_CompletedAt",
-                table: TableName);
+            migrationBuilder.DropIndex(name: "IX_Tasks_CompletedAt", table: TableName);
 
-            migrationBuilder.DropIndex(
-                name: "IX_Tasks_CreatedAt",
-                table: TableName);
+            migrationBuilder.DropIndex(name: "IX_Tasks_CreatedAt", table: TableName);
 
-            migrationBuilder.DropIndex(
-                name: "IX_Tasks_Order",
-                table: TableName);
+            migrationBuilder.DropIndex(name: "IX_Tasks_Order", table: TableName);
         }
     }
 }

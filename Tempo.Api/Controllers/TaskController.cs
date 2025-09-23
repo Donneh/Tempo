@@ -41,8 +41,9 @@ public class TaskController(ITaskItemService taskItemService) : ControllerBase
 
     [HttpGet("date-range")]
     public async Task<ActionResult<IEnumerable<TaskResponse>>> GetTasksByDateRange(
-        [FromQuery] DateOnly startDate, 
-        [FromQuery] DateOnly endDate)
+        [FromQuery] DateOnly startDate,
+        [FromQuery] DateOnly endDate
+    )
     {
         var tasks = await taskItemService.GetTasksByDateRange(startDate, endDate);
         return Ok(tasks);

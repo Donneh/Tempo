@@ -28,20 +28,23 @@ public class TaskItemRepository(TempoDbContext context) : ITaskItemRepository
     {
         var startOfDay = date.ToDateTime(TimeOnly.MinValue);
         var endOfDay = date.ToDateTime(TimeOnly.MaxValue);
-        
-        return await context.Tasks
-            .Where(t => t.CreatedAt >= startOfDay && t.CreatedAt <= endOfDay)
+
+        return await context
+            .Tasks.Where(t => t.CreatedAt >= startOfDay && t.CreatedAt <= endOfDay)
             .OrderBy(t => t.Order)
             .ToListAsync();
     }
 
-    public async Task<IEnumerable<TaskItem>> GetByDateRangeAsync(DateOnly startDate, DateOnly endDate)
+    public async Task<IEnumerable<TaskItem>> GetByDateRangeAsync(
+        DateOnly startDate,
+        DateOnly endDate
+    )
     {
         var startDateTime = startDate.ToDateTime(TimeOnly.MinValue);
         var endDateTime = endDate.ToDateTime(TimeOnly.MaxValue);
-        
-        return await context.Tasks
-            .Where(t => t.CreatedAt >= startDateTime && t.CreatedAt <= endDateTime)
+
+        return await context
+            .Tasks.Where(t => t.CreatedAt >= startDateTime && t.CreatedAt <= endDateTime)
             .OrderBy(t => t.CreatedAt)
             .ThenBy(t => t.Order)
             .ToListAsync();
