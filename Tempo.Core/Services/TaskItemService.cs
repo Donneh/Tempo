@@ -64,6 +64,38 @@ public class TaskItemService(ITaskItemRepository taskItemRepository) : ITaskItem
         });
     }
 
+    public async Task<IEnumerable<TaskResponse>> GetTasksByDate(DateOnly date)
+    {
+        var tasks = await taskItemRepository.GetByDateAsync(date);
+
+        return tasks.Select(task => new TaskResponse
+        {
+            Id = task.Id,
+            Text = task.Text,
+            Order = task.Order,
+            CreatedAt = task.CreatedAt,
+            UpdatedAt = task.UpdatedAt,
+            CompletedAt = task.CompletedAt,
+            IsCompleted = task.IsCompleted,
+        });
+    }
+
+    public async Task<IEnumerable<TaskResponse>> GetTasksByDateRange(DateOnly startDate, DateOnly endDate)
+    {
+        var tasks = await taskItemRepository.GetByDateRangeAsync(startDate, endDate);
+
+        return tasks.Select(task => new TaskResponse
+        {
+            Id = task.Id,
+            Text = task.Text,
+            Order = task.Order,
+            CreatedAt = task.CreatedAt,
+            UpdatedAt = task.UpdatedAt,
+            CompletedAt = task.CompletedAt,
+            IsCompleted = task.IsCompleted,
+        });
+    }
+
     public async Task<TaskResponse?> CompleteTask(int id)
     {
         var task = await taskItemRepository.GetByIdAsync(id);

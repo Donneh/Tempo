@@ -17,6 +17,10 @@ public class TempoDbContext(DbContextOptions<TempoDbContext> options) : DbContex
             entity.Property(e => e.CreatedAt).IsRequired();
             entity.Property(e => e.UpdatedAt).IsRequired();
             entity.Property(e => e.CompletedAt);
+            
+            entity.HasIndex(e => e.Order);
+            entity.HasIndex(e => e.CreatedAt);
+            entity.HasIndex(e => e.CompletedAt);
         });
     }
 }
